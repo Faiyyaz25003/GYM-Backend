@@ -93,6 +93,7 @@ import achievementRoutes from './routes/acheivementRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
 import referenceRoutes from './routes/referenceRoutes.js';
 import excersizeReferenceRoutes from './Routes/excersizeReferenceRoutes.js';
+import attendanceRoutes from "./Routes/attendanceRoutes.js";
 
 dotenv.config();
 
@@ -122,6 +123,7 @@ app.use('/api/achievements', achievementRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/references', referenceRoutes);
 app.use('/api/excersizeReference', excersizeReferenceRoutes);
+app.use("/api/attendance", attendanceRoutes);
 
 // Health Check Route
 app.get('/api/health', (req, res) => {
