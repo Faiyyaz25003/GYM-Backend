@@ -4,27 +4,29 @@ import Member from "../Models/memberModel.js";
 // ✅ Create a new member
 export const createMember = async (req, res) => {
   try {
-    const {
-      name,
-      email,
-      phone,
-      address,
-      plan,          
-      joinDate,
-      endDate,
-      profilePic,
-    } = req.body;
+  const {
+  name,
+  email,
+  phone,
+  address,
+  plan,
+  goal,
+  joinDate,
+  endDate,
+  profilePic,
+} = req.body;
 
     const newMember = new Member({
-      name,
-      email,
-      phone,
-      address,
-      plan,
-      joinDate,
-      endDate,
-      profilePic,
-    });
+  name,
+  email,
+  phone,
+  address,
+  plan,
+  goal,
+  joinDate,
+  endDate,
+  profilePic,
+});
 
     const savedMember = await newMember.save();
     res.status(201).json(savedMember);
